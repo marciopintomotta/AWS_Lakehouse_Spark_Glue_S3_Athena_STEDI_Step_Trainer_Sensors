@@ -9,13 +9,17 @@ and curate them into a data lakehouse solution on AWS so that Data Scientists ca
 ## Project Motivation
 
 My goal was building an ELT pipeline based on AWS Glue, AWS S3, Python, and Spark, to create Python scripts to build a lakehouse solution in 
-AWS that satisfies these requirements from the STEDI data scientists.
+AWS that satisfies requirements from the STEDI data scientists.
 
- * AWS S3 for host landing, trusted and cureates data zones
- * AWS Glue Studio jobs (Python, and Spark) to make data transformacion
- * AWS Athena - verify Glue job querying the created/transformed data in each data zone
+The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) on AWS S3 and a set of AWS Glue jobs, which transform and move the data through the zones according.
 
- The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) on AWS S3 and a set of Glue jobs, which transform and move the data through the zones according to the requirements.
+AWS tools were used in the solution in the following contexts:
+
+ * AWS S3 for host landing, trusted and cureates data zones.
+ * AWS Glue Studio jobs (Python, and Spark) to make data transformacion.
+ * AWS Athena to verify AWS Glue job, querying the created/transformed data in each data zone.
+
+ 
 
  
 ## Project Requirements
