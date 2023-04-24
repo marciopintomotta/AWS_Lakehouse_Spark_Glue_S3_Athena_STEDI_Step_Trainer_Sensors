@@ -81,6 +81,7 @@ A Python script using Spark that creates an aggregated table that has each of th
 
 ```
 AWS_ELT_Data_Warehouse_S3_2_Redshift_Sparkify/
+ ├── data                           JSON data files
  ├── images                         Images files
  └── accelerometer_landing.sql      SQL script to create accelerometer_landing table
  ├── accelerometer_trusted.py       Python script using Spark to move from landing to trust accelerometer data from customers who agreed to share their data
