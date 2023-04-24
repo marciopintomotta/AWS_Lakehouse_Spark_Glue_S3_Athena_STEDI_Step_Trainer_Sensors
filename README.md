@@ -70,6 +70,13 @@ A Python script using Spark that sanitizes the Customer data (Trusted Zone) and 
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customers_curated_job.png)
 
 
+##### Machine Learning Curated job using AWS Glue Studio
+
+A Python script using Spark that creates an aggregated table that has each of the Step Trainer Readings, and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data, and make a glue table called machine_learning_curated.
+
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/machine_learning_curated_job.png)
+
+
 ## Project Structure
 
 ```
