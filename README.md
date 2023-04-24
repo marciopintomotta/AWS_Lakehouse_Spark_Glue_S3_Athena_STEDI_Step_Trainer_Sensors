@@ -27,13 +27,13 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 ##### Query Customer Landing zone using AWS Athena
 
-![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_landing.png " Customer")
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_landing.png)
 
 #### Accelerometer Landing 
 
 ##### Query Accelerometer Landing zone using AWS Athena
 
-![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_landing.png " Star")
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_landing.png)
 
 
 
@@ -41,7 +41,12 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 ##### Customer Trusted job using AWS Glue Studio
 
-![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_trusted_job.png " Star")
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_trusted_job.png)
+
+
+##### Accelerometer Trusted job using AWS Glue Studio
+
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_trusted_job.png)
 
 
 ### Curated Zone
