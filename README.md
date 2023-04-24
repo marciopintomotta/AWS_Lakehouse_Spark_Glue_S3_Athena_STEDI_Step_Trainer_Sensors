@@ -22,15 +22,15 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 ```
 AWS_ELT_Data_Warehouse_S3_2_Redshift_Sparkify/
- ├── images                              Images
+ ├── images                         Images files
  └── accelerometer_landing.sql      SQL script to create accelerometer_landing table
- ├── accelerometer_trusted.py       Python script to create an accelerometer landing data
- ├── customer_landing.sql           Python script to verify the connection to the AWS Redshift cluster
- ├── customer_trusted.py            Python script to create the tables in AWS Redshift
- ├── customers_curated.py           Python script to load data from S3 to staging, fact and dimensional tables in AWS Redshift
+ ├── accelerometer_trusted.py       Python script using Spark to move from landing to trust accelerometer data from customers who agreed to share their data
+ ├── customer_landing.sql           SQL script to create customer_landing table
+ ├── customer_trusted.py            Python script using Spark to move from landing to trust customer data from customers who agreed to share their data
+ ├── customers_curated.py           Python script using Spark to move from trust to curated customer data who have accelerometer data and have agreed to share their data
  ├── machine_learning_curated.py    Python script to view an Example Output from the fact and dimensional tables on AWS Redshift
  ├── README.md                      Documentation of the project
- ├── step_trainer_trusted.py        Python script to delete the Redshift Cluster on AWS
+ ├── step_trainer_trusted.py        Python script using Spark to move from trust to curated Trainer Readings and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data
  
 ## Project Requirements
 
