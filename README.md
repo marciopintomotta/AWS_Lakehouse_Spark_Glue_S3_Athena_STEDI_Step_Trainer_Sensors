@@ -49,4 +49,10 @@ AWS that satisfies these requirements from the STEDI data scientists.
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_trusted_job.png)
 
 
+##### Step Trainer Trusted job using AWS Glue Studio
+
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/step_trainer_trusted_job.png)
+
+
+
 ### Curated Zone

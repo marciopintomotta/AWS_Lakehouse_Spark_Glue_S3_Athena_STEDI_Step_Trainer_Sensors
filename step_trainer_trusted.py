@@ -12,18 +12,6 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args["JOB_NAME"], args)
 
-# Script generated for node S3 Customer Curated
-S3CustomerCurated_node1 = glueContext.create_dynamic_frame.from_options(
-    format_options={"multiline": False},
-    connection_type="s3",
-    format="json",
-    connection_options={
-        "paths": ["s3://stedi-lake-house-aws/customer/curated/"],
-        "recurse": True,
-    },
-    transformation_ctx="S3CustomerCurated_node1",
-)
-
 # Script generated for node S3 Step Trainer landing
 S3StepTrainerlanding_node1682333743210 = glueContext.create_dynamic_frame.from_options(
     format_options={"multiline": False},
@@ -36,6 +24,18 @@ S3StepTrainerlanding_node1682333743210 = glueContext.create_dynamic_frame.from_o
     transformation_ctx="S3StepTrainerlanding_node1682333743210",
 )
 
+# Script generated for node S3 Customer Curated
+S3CustomerCurated_node1 = glueContext.create_dynamic_frame.from_options(
+    format_options={"multiline": False},
+    connection_type="s3",
+    format="json",
+    connection_options={
+        "paths": ["s3://stedi-lake-house-aws/customer/curated/"],
+        "recurse": True,
+    },
+    transformation_ctx="S3CustomerCurated_node1",
+)
+
 # Script generated for node Join
 Join_node1682333625703 = Join.apply(
     frame1=S3CustomerCurated_node1,
@@ -45,9 +45,26 @@ Join_node1682333625703 = Join.apply(
     transformation_ctx="Join_node1682333625703",
 )
 
+# Script generated for node Drop Fields
+DropFields_node1682339217694 = DropFields.apply(
+    frame=Join_node1682333625703,
+    paths=[
+        "shareWithPublicAsOfDate",
+        "birthDay",
+        "registrationDate",
+        "shareWithResearchAsOfDate",
+        "customerName",
+        "email",
+        "lastUpdateDate",
+        "phone",
+        "shareWithFriendsAsOfDate",
+    ],
+    transformation_ctx="DropFields_node1682339217694",
+)
+
 # Script generated for node S3 Step Trainer Trusted
 S3StepTrainerTrusted_node3 = glueContext.write_dynamic_frame.from_options(
-    frame=Join_node1682333625703,
+    frame=DropFields_node1682339217694,
     connection_type="s3",
     format="json",
     connection_options={
