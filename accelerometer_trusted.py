@@ -5,6 +5,15 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
+
+"""
+
+A Python script using Spark that sanitizes the Accelerometer data from the Mobile App (Landing Zone) - and only store Accelerometer Readings from customers 
+who agreed to share their data for research purposes (Trusted Zone) - creating a Glue Table called accelerometer_trusted.
+
+"""
+
+
 args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 sc = SparkContext()
 glueContext = GlueContext(sc)

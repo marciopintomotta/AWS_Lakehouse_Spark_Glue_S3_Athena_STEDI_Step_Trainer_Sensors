@@ -5,6 +5,15 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
+
+"""
+
+A Python script using Spark that read the Step Trainer IoT data stream (S3) and populate a Trusted Zone Glue Table called step_trainer_trusted that 
+contains the Step Trainer Records data for customers who have accelerometer data and have agreed to share their data for research (customers_curated).
+
+"""
+
+
 args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 sc = SparkContext()
 glueContext = GlueContext(sc)

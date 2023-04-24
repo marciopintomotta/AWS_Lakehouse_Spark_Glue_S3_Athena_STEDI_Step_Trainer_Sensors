@@ -5,6 +5,17 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
+"""
+
+A Python script using Spark that creates an aggregated table that has each of the Step Trainer Readings, 
+and the associated accelerometer reading data for the same timestamp, 
+but only for customers who have agreed to share their data, 
+and make a glue table called machine_learning_curated.
+
+"""
+
+
+
 args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 sc = SparkContext()
 glueContext = GlueContext(sc)

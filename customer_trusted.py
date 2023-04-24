@@ -6,6 +6,15 @@ from awsglue.context import GlueContext
 from awsglue.job import Job
 import re
 
+
+"""
+
+A Python script using Spark that sanitizes the Customer data from the Website (Landing Zone) and only store the Customer Records who agreed 
+to share their data for research purposes (Trusted Zone) - creating a Glue Table called customer_trusted.
+
+"""
+
+
 args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 sc = SparkContext()
 glueContext = GlueContext(sc)

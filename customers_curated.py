@@ -7,6 +7,15 @@ from awsglue.job import Job
 from awsglue.dynamicframe import DynamicFrame
 from pyspark.sql import functions as SqlFuncs
 
+"""
+
+A Python script using Spark that sanitizes the Customer data (Trusted Zone) and create a Glue Table (Curated Zone) that only includes customers who 
+have accelerometer data and have agreed to share their data for research called customers_curated.
+
+"""
+
+
+
 args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 sc = SparkContext()
 glueContext = GlueContext(sc)
