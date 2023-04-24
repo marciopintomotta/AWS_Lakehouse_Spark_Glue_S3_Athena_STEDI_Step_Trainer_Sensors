@@ -15,7 +15,7 @@ AWS that satisfies these requirements from the STEDI data scientists.
  * AWS Glue Studio jobs (Python, and Spark) to make data transformacion
  * AWS Athena - verify Glue job querying the created/transformed data in each data zone
 
- The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) and a set of Glue jobs, which transform and move the data through the zones according to the requirements.
+ The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) on AWS S3 and a set of Glue jobs, which transform and move the data through the zones according to the requirements.
 
  
 ## Project Requirements
@@ -41,15 +41,21 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 ##### Customer Trusted job using AWS Glue Studio
 
+A Python script using Spark that sanitizes the Customer data from the Website (Landing Zone) and only store the Customer Records who agreed to share their data for research purposes (Trusted Zone) - creating a Glue Table called customer_trusted.
+
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_trusted_job.png)
 
 
 ##### Accelerometer Trusted job using AWS Glue Studio
 
+ A Python script using Spark that sanitizes the Accelerometer data from the Mobile App (Landing Zone) - and only store Accelerometer Readings from customers who agreed to share their data for research purposes (Trusted Zone) - creating a Glue Table called accelerometer_trusted.
+
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_trusted_job.png)
 
 
 ##### Step Trainer Trusted job using AWS Glue Studio
+
+A Python script using Spark that read the Step Trainer IoT data stream (S3) and populate a Trusted Zone Glue Table called step_trainer_trusted that contains the Step Trainer Records data for customers who have accelerometer data and have agreed to share their data for research (customers_curated).
 
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/step_trainer_trusted_job.png)
 
@@ -58,6 +64,8 @@ AWS that satisfies these requirements from the STEDI data scientists.
 ### Curated Zone
 
 ##### Customer Curated job using AWS Glue Studio
+
+A Python script using Spark that sanitizes the Customer data (Trusted Zone) and create a Glue Table (Curated Zone) that only includes customers who have accelerometer data and have agreed to share their data for research called customers_curated.
 
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customers_curated_job.png)
 
