@@ -56,3 +56,7 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 
 ### Curated Zone
+
+##### Customer Curated job using AWS Glue Studio
+
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customers_curated_job.png)
