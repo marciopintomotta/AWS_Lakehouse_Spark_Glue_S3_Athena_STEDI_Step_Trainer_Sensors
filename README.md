@@ -15,19 +15,28 @@ AWS that satisfies these requirements from the STEDI data scientists.
  * AWS Glue Studio jobs (Python, and Spark) to make data transformacion
  * AWS Athena - verify Glue job querying the created/transformed data in each data zone
 
+ The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) 
+
 
 ## Project Requirements
 
 
 ### Landing Zone
 
+#### Customer Landing 
+
+##### Query Customer Landing zone using AWS Athena
+
+
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/customer_landing.png" Accelerometer Landing Query")
+
+
 #### Accelerometer Landing 
 
-##### Query Accelerometer Landing zone using Athena
+##### Query Accelerometer Landing zone using AWS Athena
 
 
-![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_landing.png " Accelerometer Landing Query")
-
+![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_landing.png" Accelerometer Landing Query")
 
 
 
