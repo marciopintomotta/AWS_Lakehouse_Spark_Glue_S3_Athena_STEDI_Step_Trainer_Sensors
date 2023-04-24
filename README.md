@@ -15,7 +15,7 @@ AWS that satisfies these requirements from the STEDI data scientists.
  * AWS Glue Studio jobs (Python, and Spark) to make data transformacion
  * AWS Athena - verify Glue job querying the created/transformed data in each data zone
 
- The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) 
+ The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) and a set of Glue jobs, which transform and move the data through the zones according to the requirements.
 
  
 ## Project Requirements
