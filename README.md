@@ -21,7 +21,9 @@ AWS that satisfies these requirements from the STEDI data scientists.
 
 ### Landing Zone
 
-#### Accelerometer Landing
+#### Accelerometer Landing 
+
+##### Query Accelerometer Landing zone using Athena
 
 
 ![Alt text](https://github.com/marciopintomotta/AWS_Lakehouse_Spark_Glue_S3_Athena_STEDI_Step_Trainer_Sensors/blob/master/images/accelerometer_landing.png " Accelerometer Landing Query")
