@@ -18,6 +18,20 @@ AWS that satisfies these requirements from the STEDI data scientists.
  The lakehouse solution is bult using 3 data zones (Landing, Trusted, Curated) 
 
 
+## Project Structure
+
+```
+AWS_ELT_Data_Warehouse_S3_2_Redshift_Sparkify/
+ ├── images                              Images
+ └── accelerometer_landing.sql      SQL script to create accelerometer_landing table
+ ├── accelerometer_trusted.py       Python script to create an accelerometer landing data
+ ├── customer_landing.sql           Python script to verify the connection to the AWS Redshift cluster
+ ├── customer_trusted.py            Python script to create the tables in AWS Redshift
+ ├── customers_curated.py           Python script to load data from S3 to staging, fact and dimensional tables in AWS Redshift
+ ├── machine_learning_curated.py    Python script to view an Example Output from the fact and dimensional tables on AWS Redshift
+ ├── README.md                      Documentation of the project
+ ├── step_trainer_trusted.py        Python script to delete the Redshift Cluster on AWS
+ 
 ## Project Requirements
 
 
