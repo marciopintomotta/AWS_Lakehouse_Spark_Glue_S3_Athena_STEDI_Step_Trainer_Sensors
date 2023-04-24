@@ -72,6 +72,6 @@ AWS_ELT_Data_Warehouse_S3_2_Redshift_Sparkify/
  ├── customer_landing.sql           SQL script to create customer_landing table
  ├── customer_trusted.py            Python script using Spark to move from landing to trust customer data from customers who agreed to share their data
  ├── customers_curated.py           Python script using Spark to move from trust to curated customer data who have accelerometer data and have agreed to share their data
- ├── machine_learning_curated.py    Python script to view an Example Output from the fact and dimensional tables on AWS Redshift
+ ├── machine_learning_curated.py    Python script using Spark to move from trust to curated Trainer Readings and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data
  ├── README.md                      Documentation of the project
- ├── step_trainer_trusted.py        Python script using Spark to move from trust to curated Trainer Readings and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data
+ ├── step_trainer_trusted.py        Python script using Spark to move from landing to trust step trainer data who have accelerometer data and have agreed to share 
